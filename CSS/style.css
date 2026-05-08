@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+.user-card, .result-card {
+    background: #f8f9fa;
+    border: 1px dashed #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.input-group input {
+    margin: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn-start {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-start:hover {
+    background-color: #218838;
+}
+
+.dice-img {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 8px;
+}
+
+.winner-section {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff3cd;
+    border: 2px solid #ffeeba;
+    border-radius: 10px;
+}
+
+.timer {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 20px;
+}
