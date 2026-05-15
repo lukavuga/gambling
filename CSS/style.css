@@ -1,68 +1,128 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    background: url('../SLIKE/bg.png') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    align-items: center; /* Vertikalno poravna celoten meni na sredino zaslona */
+    min-height: 100vh;  /* Zagotovi, da telo zavzema celotno višino zaslona */
+    padding: 10px;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 .container {
-    background: white;
-    padding: 30px;
+    background: rgba(10, 30, 15, 0.94);
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    max-width: 800px;
+    border: 3px solid #d4af37;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    max-width: 950px; /* Rahlo razširimo, da trije stolpci lepo stojijo skupaj */
     width: 100%;
     text-align: center;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #ffd700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+/* Ključna sprememba: kartice igralcev gredo v 3 stolpce drug ob drugem */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
 .user-card, .result-card {
-    background: #f8f9fa;
-    border: 1px dashed #ccc;
-    padding: 15px;
-    margin-bottom: 15px;
+    background: #0d3a1a;
+    border: 2px solid #b8860b;
+    padding: 12px;
     border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+.result-card h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ffd700;
 }
 
 .input-group input {
     margin: 5px;
-    padding: 8px;
-    border: 1px solid #ddd;
+    padding: 10px;
+    border: 1px solid #d4af37;
     border-radius: 5px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
 }
 
 .btn-start {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #d4af37 0%, #aa7c11 100%);
+    color: #000000;
+    font-weight: bold;
+    border: 2px solid #ffd700;
+    padding: 14px 40px;
+    font-size: 1.2rem;
+    border-radius: 30px;
     cursor: pointer;
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: 0.3s ease;
 }
 
 .btn-start:hover {
-    background-color: #218838;
+    background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.7);
+    transform: translateY(-2px);
 }
 
+/* Malo zmanjšane kocke, da ne zavzamejo preveč navpičnega prostora */
 .dice-img {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+    width: 45px;
+    height: 45px;
+    margin: 4px;
     border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    padding: 2px;
 }
 
 .winner-section {
-    margin-top: 20px;
-    padding: 15px;
-    background: #fff3cd;
-    border: 2px solid #ffeeba;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(135deg, #224d28 0%, #113316 100%);
+    border: 3px dashed #ffd700;
     border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.winner-section h2 {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.4rem;
+}
+
+.winner-section p {
+    font-size: 1.15rem;
+    color: #ffffff;
+    font-weight: bold;
+    margin: 5px 0;
 }
 
 .timer {
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 20px;
+    color: #dddddd;
+    font-size: 0.85rem;
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-style: italic;
 }
